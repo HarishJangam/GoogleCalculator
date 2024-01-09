@@ -2,6 +2,7 @@ package demo;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -46,11 +47,117 @@ public class TestCases {
     }
 
     
-    public  void testCase01(){
+    public  void testCase01() throws InterruptedException{
         System.out.println("Start Test case: testCase01");
         driver.get("https://www.google.com");
-        System.out.println("end Test case: testCase02");
+        driver.findElement(By.xpath("//textarea[@id='APjFqb']")).sendKeys("calculator");
+        driver.findElement(By.xpath("//input[@value='Google Search']")).click();
+        Thread.sleep(2000);
+        String str=driver.getCurrentUrl();
+        if(str.contains("calculator")){
+            System.out.println("it is in calculator page");
+        }
+        else{
+            System.out.println("somthing went wrong");
+        }
+        // System.out.println("end Test case: testCase02");
+        String ans=driver.findElement(By.xpath("//*[@id='cwos']")).getText();
+        if(ans.equals("0")){
+            System.out.println("verified sucsessfully");
+        }
+        else{
+            System.out.println("verification failed");
+        }
+        Thread.sleep(2000);
     }
-
+    public  void testCase02() throws InterruptedException{
+        System.out.println("Start Test case: testCase02");
+        // driver.get("https://www.google.com");
+        driver.findElement(By.xpath("//div[@jsname='Ax5wH']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='XSr6wc']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='rk7bOd']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='Pt8tGc']")).click();
+        Thread.sleep(1000);
+        String ans1=driver.findElement(By.xpath("//*[@id='cwos']")).getText();
+        Thread.sleep(1000);
+        if(ans1.equals("12")){
+            System.out.println("verified sucsessfully 12");
+        }
+        else{
+            System.out.println("verification failed");
+        }
+        driver.findElement(By.xpath("//div[@jsname='N10B9']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='Ax5wH']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='pPHzQc']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='T7PMFe']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='Pt8tGc']")).click();
+        Thread.sleep(1000);
+        String ans2=driver.findElement(By.xpath("//*[@id='cwos']")).getText();
+        Thread.sleep(1000);
+        if(ans2.equals("7")){
+            System.out.println("verified sucsessfully 7");
+        }
+        else{
+            System.out.println("verification failed");
+        }
+    }
+    public  void testCase03() throws InterruptedException{
+        System.out.println("Start Test case: testCase03");
+        // driver.get("https://www.google.com");
+        driver.findElement(By.xpath("//div[@jsname='N10B9']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='bkEvMb']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='YovRWb']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='KN1kY']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='Pt8tGc']")).click();
+        Thread.sleep(1000);
+        String ans2=driver.findElement(By.xpath("//*[@id='cwos']")).getText();
+        Thread.sleep(1000);
+        if(ans2.equals("30")){
+            System.out.println("verified sucsessfully 7");
+        }
+        else{
+            System.out.println("verification failed");
+        }
+        driver.findElement(By.xpath("//div[@jsname='SLn8gc']")).click();
+        String ans=driver.findElement(By.xpath("//*[@id='cwos']")).getText();
+        if(ans.equals("0")){
+            System.out.println("verified sucsessfully");
+        }
+        else{
+            System.out.println("verification failed");
+        }
+    }
+    public  void testCase04() throws InterruptedException{
+        System.out.println("Start Test case: testCase04");
+        // driver.get("https://www.google.com");
+        driver.findElement(By.xpath("//div[@jsname='lVjWed']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='bkEvMb']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='WxTTNd']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='Ax5wH']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[@jsname='Pt8tGc']")).click();
+        Thread.sleep(1000);
+        String ans=driver.findElement(By.xpath("//*[@id='cwos']")).getText();
+        if(ans.equals("4")){
+            System.out.println("verified sucsessfully");
+        }
+        else{
+            System.out.println("verification failed");
+        }
+    }
 
 }

@@ -1,0 +1,12 @@
+Mar 12, 2024 7:12:01 PM hudson.remoting.jnlp.Main createEngine
+INFO: Setting up agent: Hari
+Mar 12, 2024 7:12:01 PM hudson.remoting.jnlp.Main$CuiListener <init>
+INFO: Jenkins agent is running in headless mode.
+Mar 12, 2024 7:12:01 PM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 4.11.2
+Mar 12, 2024 7:12:01 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using D:\Java_Gradle\xGoogle\harish-jangam-criodo-ME_QA_XGOOGLE_CALC1\remoting as a remoting work directory
+Mar 12, 2024 7:12:02 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: WebSocket connection open
+Mar 12, 2024 7:12:02 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connected
